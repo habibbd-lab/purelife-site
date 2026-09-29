@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PureLife – Wellness Groceries</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script>tailwind.config={theme:{extend:{colors:{pl:{DEFAULT:'#3F5A1E',dark:'#2F4516',sage:'#E7EEDA',cream:'#FBF9F4',ink:'#262626',mute:'#5F6368',line:'#E6E3DA'}},fontFamily:{sans:['Poppins','sans-serif'],serif:['Playfair Display','serif']}}}}</script>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+
+<!-- ANNOUNCEMENT BAR : Elementor Container + Heading -->
+<div class="bg-pl text-white text-xs text-center py-2 px-3">Free delivery on orders over $59 | Same-day delivery in select areas</div>
+
+<!-- HEADER : Container (row) > Image/Heading | Nav Menu | Icon widgets -->
+<header class="sticky top-0 z-40 bg-white border-b border-pl-line">
+ <div class="max-w-[1200px] mx-auto px-5 h-[72px] flex items-center justify-between">
+  <a href="#home" class="flex items-center gap-2"><i class="fa-solid fa-leaf text-pl text-2xl"></i><span><b class="block font-serif italic text-xl text-pl-ink leading-none">PureLife</b><small class="text-[8px] tracking-widest text-pl-mute">WELLNESS GROCERIES</small></span></a>
+  <nav id="nav" class="hidden md:flex flex-col md:flex-row absolute md:static top-[72px] left-0 right-0 bg-white p-5 md:p-0 gap-4 md:gap-8 text-sm font-medium text-pl-ink border-b md:border-0 border-pl-line">
+   <a href="#shop">Shop</a><a href="#nutrition">Nutrition</a><a href="#guide">Wellness Guide</a><a href="#deals">Deals</a><a href="#about">About Us</a>
+  </nav>
+  <div class="flex items-center gap-5 text-pl-ink"><i class="fa-solid fa-magnifying-glass"></i><i class="fa-regular fa-user"></i>
+   <span class="relative"><i class="fa-solid fa-bag-shopping"></i><b id="cc" class="absolute -top-2 -right-3 bg-pl text-white text-[10px] w-4 h-4 rounded-full grid place-items-center">0</b></span>
+   <button id="mb" class="md:hidden" aria-label="Menu"><i class="fa-solid fa-bars"></i></button></div>
+ </div>
+</header>
+
+<!-- ============ HOME ============ -->
+<main data-pg="home">
+ <!-- HERO : Container with background image + Heading + Text Editor + 2 Buttons + Icon List -->
+ <section class="pl-hero"><div class="max-w-[1200px] mx-auto px-5 py-16 md:py-24 md:pb-32">
+  <div class="max-w-[520px]">
+   <h1 class="pl-h text-5xl md:text-6xl">Food that <br><em>nourishes life</em></h1>
+   <p class="mt-5 text-base">Wholesome groceries, expert nutrition guidance, and healthy choices for you and your family.</p>
+   <div class="mt-7 flex flex-wrap gap-3"><a href="#shop" class="pl-btn">Shop Healthy Food</a><a href="#nutrition" class="pl-btn pl-btn-o">Get Nutrition Tips</a></div>
+   <div class="mt-9 grid grid-cols-3 gap-3 text-xs">
+    <div class="flex gap-2"><i class="fa-solid fa-leaf text-pl mt-1"></i><span><b class="block text-pl-ink">100% Natural</b>No artificial additives</span></div>
+    <div class="flex gap-2"><i class="fa-solid fa-shield-heart text-pl mt-1"></i><span><b class="block text-pl-ink">Nutritionist Approved</b>Carefully selected</span></div>
+    <div class="flex gap-2"><i class="fa-solid fa-seedling text-pl mt-1"></i><span><b class="block text-pl-ink">Sustainable</b>Better for you &amp; planet</span></div>
+   </div></div></div></section>
+
+ <!-- CATEGORY STRIP : Container (floating card) > 8 Image Box widgets -->
+ <section class="max-w-[1200px] mx-auto px-5 -mt-16 relative z-10"><div class="pl-card p-5 pl-scroll md:grid md:grid-cols-8 text-center text-xs font-medium text-pl-ink" id="cats"></div></section>
+
+ <!-- PROMO CARDS : Container (row) > 3 Containers -->
+ <section class="max-w-[1200px] mx-auto px-5 mt-10 grid md:grid-cols-3 gap-5">
+  <div class="rounded-2xl bg-pl-sage p-6 flex gap-4"><i class="fa-solid fa-clipboard-list text-pl text-4xl"></i><div><h3 class="text-lg">Personalized Nutrition Guidance</h3><p class="text-xs my-2">Get recommendations tailored to your goals, lifestyle, and dietary needs.</p><a href="#nutrition" class="pl-btn pl-btn-sm !w-auto">Take the Quiz</a></div></div>
+  <div class="rounded-2xl bg-white border border-pl-line p-6"><h3 class="text-lg">Wellness Made Easy</h3><p class="text-xs my-2">Simple habits. Real results. Explore tips and expert advice for a healthier you.</p><a href="#guide" class="pl-link">Explore Guide →</a></div>
+  <div class="rounded-2xl bg-pl-sage p-6 flex gap-4 items-center"><div><span class="text-[10px] bg-pl text-white rounded-full px-3 py-1">Deal of the Week</span><h3 class="text-lg mt-2">Organik Chia Seeds</h3><p class="text-xs">250g</p><p class="pl-price text-xl">$6.49 <s class="text-xs text-pl-mute font-normal">$8.99</s></p><button class="pl-btn pl-btn-sm !w-auto add">Add to Cart</button></div><img class="w-24 rounded-xl" src="images/chia-seeds.svg" alt="Organik Chia Seeds"></div>
+ </section>
+
+ <!-- FEATURED PRODUCTS : Heading + Container (scroll row) of product cards -->
+ <section class="max-w-[1200px] mx-auto px-5 mt-14">
+  <div class="flex justify-between items-center mb-5"><h2 class="text-xl">Featured Products</h2><a href="#shop" class="pl-link">View All →</a></div>
+  <div class="flex items-center gap-3"><button class="pl-chip !px-3" data-s="-1" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button><div id="feat" class="pl-scroll flex-1"></div><button class="pl-chip !px-3" data-s="1" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button></div>
+ </section>
+
+ <!-- DAILY WELLNESS TIPS : 3 Image Box widgets (image left) -->
+ <section class="max-w-[1200px] mx-auto px-5 mt-14">
+  <div class="flex justify-between items-center mb-5"><h2 class="text-xl">Daily Wellness Tips</h2><a href="#guide" class="pl-link">More Tips →</a></div>
+  <div class="grid md:grid-cols-3 gap-5" id="tips-home"></div>
+ </section>
+</main>
+
+<!-- ============ SHOP ============ -->
+<main data-pg="shop" hidden>
+ <section class="bg-pl-sage py-12"><div class="max-w-[1200px] mx-auto px-5"><p class="text-xs">Home / Shop</p><h1 class="pl-h text-4xl mt-2">Shop <em>healthy food</em></h1><p class="mt-2 text-sm">Handpicked groceries for every diet and every day.</p></div></section>
+ <section class="max-w-[1200px] mx-auto px-5 py-10 grid md:grid-cols-[230px_1fr] gap-8">
+  <aside class="pl-card p-5 h-fit text-sm">
+   <h3 class="text-base mb-2">Category</h3><div class="flex flex-wrap gap-2 mb-5" id="chips"></div>
+   <h3 class="text-base mb-2">Dietary</h3><div class="grid gap-1 mb-5"><label><input type="checkbox" class="accent-[#3F5A1E]"> Vegan</label><label><input type="checkbox" class="accent-[#3F5A1E]"> Gluten Free</label><label><input type="checkbox" class="accent-[#3F5A1E]"> Organic</label><label><input type="checkbox" class="accent-[#3F5A1E]"> High Protein</label></div>
+   <h3 class="text-base mb-2">Max price: <span id="pv">$30</span></h3><input id="pr" type="range" min="5" max="30" value="30" class="w-full accent-[#3F5A1E]">
+  </aside>
+  <div><div class="flex justify-between text-sm mb-4"><span id="rc"></span><select class="pl-chip"><option>Popular</option><option>Price: low to high</option><option>Newest</option></select></div><div id="shopGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-5"></div></div>
+ </section>
+</main>
+
+<!-- ============ NUTRITION ============ -->
+<main data-pg="nutrition" hidden>
+ <section class="bg-pl-sage py-12"><div class="max-w-[1200px] mx-auto px-5"><p class="text-xs">Home / Nutrition</p><h1 class="pl-h text-4xl mt-2">Nutrition that fits <em>your life</em></h1></div></section>
+ <section class="max-w-[1200px] mx-auto px-5 py-12 grid md:grid-cols-2 gap-8">
+  <div class="pl-card p-7"><h2 class="text-2xl">Find your plan</h2><p class="text-sm my-2">What is your main goal?</p>
+   <div class="flex flex-wrap gap-2 my-4" id="quiz"><span class="pl-chip">More energy</span><span class="pl-chip">Build muscle</span><span class="pl-chip">Eat plant-based</span><span class="pl-chip">Family meals</span></div>
+   <button id="qb" class="pl-btn">See my picks</button><p id="qr" class="mt-4 text-sm text-pl font-medium"></p></div>
+  <div class="grid grid-cols-3 gap-4 text-center text-sm text-pl-ink font-medium">
+   <div class="rounded-2xl bg-pl-sage p-5"><i class="fa-solid fa-dumbbell text-pl text-2xl"></i><p class="mt-2">Protein</p></div><div class="rounded-2xl bg-pl-sage p-5"><i class="fa-solid fa-wheat-awn text-pl text-2xl"></i><p class="mt-2">Fiber</p></div><div class="rounded-2xl bg-pl-sage p-5"><i class="fa-solid fa-droplet text-pl text-2xl"></i><p class="mt-2">Hydration</p></div>
+   <div class="rounded-2xl bg-pl-sage p-5"><i class="fa-solid fa-heart-pulse text-pl text-2xl"></i><p class="mt-2">Healthy Fats</p></div><div class="rounded-2xl bg-pl-sage p-5"><i class="fa-solid fa-lemon text-pl text-2xl"></i><p class="mt-2">Vitamins</p></div><div class="rounded-2xl bg-pl-sage p-5"><i class="fa-solid fa-bacteria text-pl text-2xl"></i><p class="mt-2">Gut Health</p></div></div>
+ </section>
+ <section class="max-w-[1200px] mx-auto px-5 pb-14"><h2 class="text-xl mb-5">Meet our nutritionists</h2><div class="grid md:grid-cols-3 gap-5">
+  <div class="pl-card p-5 text-center"><img class="w-20 h-20 rounded-full mx-auto" src="images/avatar-1.svg" alt=""><h3 class="mt-3">Dr. Amina Rahman</h3><p class="text-xs mb-3">Family nutrition</p><a class="pl-btn pl-btn-sm">Book a Consultation</a></div>
+  <div class="pl-card p-5 text-center"><img class="w-20 h-20 rounded-full mx-auto" src="images/avatar-2.svg" alt=""><h3 class="mt-3">Rafi Noor, RD</h3><p class="text-xs mb-3">Sports &amp; protein</p><a class="pl-btn pl-btn-sm">Book a Consultation</a></div>
+  <div class="pl-card p-5 text-center"><img class="w-20 h-20 rounded-full mx-auto" src="images/avatar-3.svg" alt=""><h3 class="mt-3">Sara Khan, MSc</h3><p class="text-xs mb-3">Plant-based eating</p><a class="pl-btn pl-btn-sm">Book a Consultation</a></div></div></section>
+</main>
+
+<!-- ============ WELLNESS GUIDE ============ -->
+<main data-pg="guide" hidden>
+ <section class="bg-pl-sage py-12"><div class="max-w-[1200px] mx-auto px-5"><p class="text-xs">Home / Wellness Guide</p><h1 class="pl-h text-4xl mt-2">Your wellness <em>guide</em></h1></div></section>
+ <section class="max-w-[1200px] mx-auto px-5 py-10">
+  <div class="flex flex-wrap gap-2 mb-8"><span class="pl-chip on">All</span><span class="pl-chip">Nutrition</span><span class="pl-chip">Hydration</span><span class="pl-chip">Mindful Eating</span><span class="pl-chip">Family Health</span></div>
+  <div class="grid md:grid-cols-3 gap-5" id="tips-guide"></div>
+  <div class="mt-12 rounded-2xl bg-pl-sage p-8 md:flex items-center justify-between gap-6"><div><h2 class="text-2xl">Get weekly tips</h2><p class="text-sm">Simple habits, delivered to your inbox.</p></div><div class="flex gap-2 mt-4 md:mt-0 md:w-[420px]"><input class="pl-input" placeholder="Your email"><button class="pl-btn">Subscribe</button></div></div>
+ </section>
+</main>
+
+<!-- ============ DEALS ============ -->
+<main data-pg="deals" hidden>
+ <section class="bg-pl-sage py-12"><div class="max-w-[1200px] mx-auto px-5"><p class="text-xs">Home / Deals</p><h1 class="pl-h text-4xl mt-2">Fresh <em>deals</em></h1></div></section>
+ <section class="max-w-[1200px] mx-auto px-5 py-10">
+  <div class="pl-card p-7 md:flex items-center gap-8"><img class="w-40 rounded-xl" src="images/chia-seeds.svg" alt="Organik Chia Seeds"><div><span class="text-[10px] bg-pl text-white rounded-full px-3 py-1">Deal of the Week</span><h2 class="text-3xl mt-3">Organik Chia Seeds 250g</h2><p class="pl-price text-2xl my-2">$6.49 <s class="text-sm text-pl-mute font-normal">$8.99</s></p><p class="text-sm mb-4">Ends in <b id="cd" class="text-pl-ink">--</b></p><button class="pl-btn add">Add to Cart</button></div></div>
+  <h2 class="text-xl mt-12 mb-5">Under $10 picks</h2><div id="dealGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-5"></div>
+  <div class="mt-12 rounded-2xl bg-pl text-white p-8 md:flex justify-between items-center"><div><h2 class="!text-white text-2xl">Healthy Rewards</h2><p class="text-sm">Earn points on every order and save more.</p></div><a class="pl-btn !bg-white !text-pl mt-4 md:mt-0">Join Now</a></div>
+ </section>
+</main>
+
+<!-- ============ ABOUT ============ -->
+<main data-pg="about" hidden>
+ <section class="bg-pl-sage py-12"><div class="max-w-[1200px] mx-auto px-5"><p class="text-xs">Home / About Us</p><h1 class="pl-h text-4xl mt-2">Our story, <em>your wellbeing</em></h1></div></section>
+ <section class="max-w-[1200px] mx-auto px-5 py-12 grid md:grid-cols-2 gap-10 items-center">
+  <img class="rounded-2xl w-full" src="images/farm.svg" alt="Our farm partners">
+  <div><h2 class="text-3xl">Good food, chosen with care</h2><p class="my-4 text-sm">PureLife started with a simple idea: healthy groceries should be easy to find, honest about what is inside, and backed by real nutrition advice. Every product is reviewed by our nutritionists before it reaches your basket.</p>
+   <div class="grid grid-cols-3 gap-3 text-xs"><div class="rounded-xl bg-pl-sage p-3"><b class="block text-pl-ink">100% Natural</b>No additives</div><div class="rounded-xl bg-pl-sage p-3"><b class="block text-pl-ink">Approved</b>By nutritionists</div><div class="rounded-xl bg-pl-sage p-3"><b class="block text-pl-ink">Sustainable</b>Eco packaging</div></div></div>
+ </section>
+ <section class="max-w-[1200px] mx-auto px-5 pb-14 grid md:grid-cols-2 gap-8">
+  <div class="pl-card p-6 grid grid-cols-3 text-center"><div><b class="pl-h text-3xl"><em>50k+</em></b><p class="text-xs">Customers</p></div><div><b class="pl-h text-3xl"><em>800</em></b><p class="text-xs">Products</p></div><div><b class="pl-h text-3xl"><em>12</em></b><p class="text-xs">Nutritionists</p></div></div>
+  <div class="pl-card p-6"><h3 class="text-lg mb-3">Contact us</h3><div class="grid gap-3"><input class="pl-input" placeholder="Name"><input class="pl-input" placeholder="Email"><textarea class="pl-input !rounded-2xl" rows="3" placeholder="Message"></textarea><button class="pl-btn">Send message</button></div></div>
+ </section>
+</main>
+
+<!-- SERVICE STRIP : Container (row) > 4 Icon Box widgets -->
+<section class="max-w-[1200px] mx-auto px-5 my-14"><div class="pl-card grid grid-cols-2 md:grid-cols-4 gap-5 p-5 text-xs">
+ <div class="flex gap-3"><i class="fa-solid fa-truck-fast text-pl text-xl"></i><span><b class="block text-pl-ink">Fast &amp; Reliable Delivery</b>On time to your door</span></div>
+ <div class="flex gap-3"><i class="fa-solid fa-circle-check text-pl text-xl"></i><span><b class="block text-pl-ink">Quality You Can Trust</b>Handpicked with care</span></div>
+ <div class="flex gap-3"><i class="fa-solid fa-gift text-pl text-xl"></i><span><b class="block text-pl-ink">Healthy Rewards</b>Earn points &amp; save more</span></div>
+ <div class="flex gap-3"><i class="fa-solid fa-headset text-pl text-xl"></i><span><b class="block text-pl-ink">Dedicated Support</b>We're here for you</span></div></div></section>
+
+<!-- FOOTER : Container > Heading, Text Editor, Icon List, Form -->
+<footer class="bg-pl text-white/80 text-sm"><div class="max-w-[1200px] mx-auto px-5 py-12 grid md:grid-cols-4 gap-8">
+ <div><b class="font-serif italic text-2xl text-white"><i class="fa-solid fa-leaf"></i> PureLife</b><p class="mt-3 text-xs">Wholesome groceries and expert nutrition guidance for the whole family.</p></div>
+ <div class="grid gap-1"><b class="text-white">Explore</b><a href="#shop">Shop</a><a href="#nutrition">Nutrition</a><a href="#guide">Wellness Guide</a></div>
+ <div class="grid gap-1"><b class="text-white">Company</b><a href="#deals">Deals</a><a href="#about">About Us</a><a href="#about">Contact</a></div>
+ <div><b class="text-white">Newsletter</b><div class="flex gap-2 mt-2"><input class="pl-input !py-2" placeholder="Email"><button class="pl-btn !bg-white !text-pl !py-2">Join</button></div></div></div>
+ <p class="text-center text-xs border-t border-white/20 py-4">© 2026 PureLife. All rights reserved.</p></footer>
+
+<script src="script.js"></script>
+</body></html>

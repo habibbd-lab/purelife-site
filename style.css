@@ -1,0 +1,23 @@
+/* PureLife - WordPress > Customizer > Additional CSS (replace image URLs with Media Library links) */
+/* ===== WORDPRESS CUSTOMIZER CSS (Additional CSS) ===== */
+:root{--pl:#3F5A1E;--pl-dark:#2F4516;--sage:#E7EEDA;--cream:#FBF9F4;--ink:#262626;--mute:#5F6368;--line:#E6E3DA}
+body{background:var(--cream);color:var(--mute);font-family:Poppins,sans-serif;line-height:1.6}
+h1,h2,h3{color:var(--ink);font-weight:600;line-height:1.15}
+.pl-h em{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;color:var(--pl)}
+.pl-btn{display:inline-block;background:var(--pl);color:#fff;border:1px solid var(--pl);border-radius:999px;padding:12px 26px;font-size:14px;font-weight:600;transition:.2s;cursor:pointer}
+.pl-btn:hover{background:var(--pl-dark)}
+.pl-btn-o{background:#fff;color:var(--ink);border-color:#cfcfc6}
+.pl-btn-o:hover{background:var(--sage);color:var(--ink)}
+.pl-btn-sm{padding:8px 14px;font-size:12px;width:100%}
+.pl-card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 6px 24px rgba(0,0,0,.06);transition:.2s}
+.pl-card:hover{transform:translateY(-3px)}
+.pl-hero{background:linear-gradient(90deg,#FBF9F4 32%,rgba(251,249,244,.1) 70%),url('images/hero.svg') center/cover}
+.pl-scroll{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.pl-scroll>*{scroll-snap-align:start;flex:0 0 200px}
+.pl-link{color:var(--pl);font-size:13px;font-weight:600}
+.pl-price{color:var(--pl);font-weight:700}
+.pl-chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 16px;font-size:13px;cursor:pointer}
+.pl-chip.on,.pl-chip:hover{background:var(--pl);color:#fff;border-color:var(--pl)}
+.pl-input{width:100%;border:1px solid var(--line);border-radius:999px;padding:12px 20px;font-size:14px;background:#fff}
+.nav-on{color:var(--pl);border-bottom:2px solid var(--pl)}
+@media(max-width:767px){.pl-hero{background:linear-gradient(180deg,#FBF9F4 45%,rgba(251,249,244,.3)),url('images/hero.svg') center/cover}}
